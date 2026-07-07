@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+
+# TwinCAT temporary files
+*.bak
+*.~u
+
+# Build output
+*.compiled-library-ge33
+
+# User-specific files
+*.suo
