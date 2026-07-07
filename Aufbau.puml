@@ -33,6 +33,18 @@ abstract class BaseComponent {
   - onError()
 }
 
+enum State {
+  Unconfigured
+  Inactive
+  Active
+  Finalized
+  Configuring
+  CleaningUp
+  Activating
+  Deactivating
+  ShuttingDown
+  ErrorProcessing}
+
 enum SupervisoryTransitions {
   create
   configure
