@@ -36,12 +36,12 @@ set -e
 function show_help() {
   echo $'\nUsage:\t build.sh [OPTIONS] \n
   Options:\n
-  \t-i --image_name\t\t Name of the image to be built (default ros2_humble_andino_fleet).\n
+  	-i --image_name\t\t Name of the image to be built (default ros2_noble_eta_fleet).\n
   Example:\n
   \tbuild.sh --image_name custom_image_name\n'
 }
 
-echo "Building the docker image for ros2 humble andino gazebo development."
+echo "Building the docker image for ROS 2 Kilted + Gazebo Ionic development."
 
 SCRIPT_FOLDER_PATH="$(cd "$(dirname "$0")"; pwd)"
 CONTEXT_FOLDER_PATH="$(cd "$(dirname "$0")"; cd .. ; pwd)"
@@ -58,8 +58,12 @@ done
 
 # Update the arguments to default values if needed.
 OS_VERSION="focal"
-IMAGE_NAME=${IMAGE_NAME:-ros2_humble_andino_fleet}
-DOCKERFILE_PATH=$SCRIPT_FOLDER_PATH/Dockerfile
+IMAGE_NAME=${IMAGE_NAME:-ros2_noble_eta_fleet}
+DOCKERFILE_PATH=$SCRIPT_FOLDER_PATH/dockerfile
+
+if [[ ! -f "$DOCKERFILE_PATH" ]]; then
+  DOCKERFILE_PATH=$SCRIPT_FOLDER_PATH/Dockerfile
+fi
 
 USERID=$(id -u)
 USER=$(whoami)

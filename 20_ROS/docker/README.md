@@ -17,7 +17,7 @@ For NVIDIA GPU support, `nvidia-container-toolkit` should be installed. *Skip th
 
 #### Building image and running container
 
-- Build the docker image whose default name is `ros2_humble_andino_fleet`:
+- Build the docker image whose default name is `ros2_noble_eta_fleet`:
 
 ```sh
 ./docker/build.sh
@@ -29,11 +29,14 @@ You can also try to set a specific image name:
 ./docker/build.sh -i my_fancy_image_name
 ```
 
-- Run a docker container from `ros2_humble_andino_fleet` called `ros2_humble_andino_fleet_container`:
+- Run or attach to a docker container from `ros2_noble_eta_fleet` called `ros2_noble_eta_fleet_container`:
 
 ```sh
 ./docker/run.sh
 ```
+
+If the container already exists, the script starts it (if needed) and attaches a shell.
+If it does not exist, it creates it and keeps it alive.
 
 - **IMPORTANT**: If you are using nvidia drivers add the `--use_nvidia` flag:
 
@@ -50,13 +53,11 @@ You can also try to set specific image and container names:
 - Inside the container, install dependencies via `rosdep`:
 
   ```sh
-  rosdep install -i -y --rosdistro humble --from-paths src
+  rosdep install -i -y --rosdistro kilted --from-paths src
   ```
 
-Note that the repository is mounted into a workspace. That is convenient if you
-are working in a single repository project. Note that for multi-repository
-workspace you should use another tool like vcs-tool to control via a `.repos`
-file the repositories in your workspace.
+This setup is GitHub-centric: clone or pull your repositories directly inside
+the container workspace.
 
 - To build:
 

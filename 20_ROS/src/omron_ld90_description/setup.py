@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'MOBERT-M5_002_A02_keep_description'
+package_name = 'omron_ld90_description'
 
 setup(
     name=package_name,
