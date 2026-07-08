@@ -1,7 +1,3 @@
-[submodule "20_ROS/src/eta_rmf"]
-	path = 20_ROS/src/eta_rmf
-	url = https://github.com/Ekumen-OS/andino_rmf.git
-	branch = humble_nav2
 [submodule "20_ROS/src/clones/andino_rmf"]
 	path = 20_ROS/src/clones/andino_rmf
 	url = https://github.com/Ekumen-OS/andino_rmf.git
