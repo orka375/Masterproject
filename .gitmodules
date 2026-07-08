@@ -1,6 +1,7 @@
 [submodule "20_ROS/src/eta_rmf"]
 	path = 20_ROS/src/eta_rmf
-	url = https://github.com/orka375/eta_rmf.git
+	url = https://github.com/Ekumen-OS/andino_rmf.git
+	branch = humble_nav2
 [submodule "20_ROS/src/clones/andino_rmf"]
 	path = 20_ROS/src/clones/andino_rmf
 	url = https://github.com/Ekumen-OS/andino_rmf.git
@@ -10,7 +11,3 @@
 [submodule "20_ROS/src/clones/rmf_demos"]
 	path = 20_ROS/src/clones/rmf_demos
 	url = https://github.com/open-rmf/rmf_demos.git
-[submodule "eta_rmf"]
-	path = eta_rmf
-	url = https://github.com/Ekumen-OS/andino_rmf.git
-	branch = humble_nav2
